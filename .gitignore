@@ -1,0 +1,16 @@
+# Virtual environment
+venv/
+
+# Python cache files
+__pycache__/
+*.pyc
+*.pyo
+
+# Configuration files
+config.json
+
+# Data files (optional)
+data/*.csv
+
+# System files
+.DS_Store
