@@ -35,9 +35,9 @@ This script fetches job vacancies without requiring authentication.
 
 ```python scripts/extract_no_auth.py```
 
-The script starts from page 7 and continues fetching jobs until no more vacancies are available.
-The data is saved to: data/bumn_jobs_no_auth.csv
-The total number of applicants across all pages is displayed.
+- The script starts from page 7 and continues fetching jobs until no more vacancies are available.
+- The data is saved to: data/bumn_jobs_no_auth.csv
+- The total number of applicants across all pages is displayed.
 
 
 2️⃣ **Extract job vacancies with authentication**
@@ -47,9 +47,9 @@ This script fetches job vacancies using a Bearer Token for authentication.
 ```python scripts/extract_auth.py```
 
 	Requires a valid Bearer Token (replace "null" in BEARER_TOKEN).
-##Fetches job listings and their total applicant count.
-##Saves the extracted data to: data/bumn_jobs_auth.csv
-##The total number of applicants for Page 1 is displayed.
+- Fetches job listings and their total applicant count.
+- Saves the extracted data to: data/bumn_jobs_auth.csv
+- The total number of applicants for Page 1 is displayed.
 
 🔒 Security Considerations
 	•	Do not hardcode sensitive credentials in the scripts.
