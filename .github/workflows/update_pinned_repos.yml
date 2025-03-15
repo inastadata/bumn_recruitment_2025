@@ -24,13 +24,13 @@ jobs:
         run: |
           echo "## 🚀 Latest Repositories" > README.md
           echo "" >> README.md
-          jq -r '.[] | "- [\(.name)](\(.html_url))"' repos.json >> README.md
+          cat repos.json | jq -r '.[] | "- [\(.name)](\(.html_url))"' >> README.md
 
-          - name: Push Changes to GitHub
-          run: |
-            git config --global user.name "github-actions[bot]"
-            git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git remote set-url origin https://x-access-token:${{ secrets.GH_PAT }}@github.com/inastadata/bumn_recruitment_2025.git
-            git add README.md
-            git commit -m "Updated pinned repositories" || echo "No changes to commit"
-            git push origin main
+      - name: Push Changes to GitHub
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git remote set-url origin https://x-access-token:${{ secrets.GH_PAT }}@github.com/inastadata/bumn_recruitment_2025.git
+          git add README.md
+          git commit -m "Updated pinned repositories" || echo "No changes to commit"
+          git push origin main
