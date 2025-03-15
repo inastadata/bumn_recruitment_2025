@@ -10,15 +10,6 @@ This project contains Python scripts to extract job vacancies from the **BUMN Re
 - Saves data in a structured **CSV format**.
 - Implements **rate limiting** to avoid excessive requests.
 
-## 📂 Project Structure
-bumn_recruitment_2025/
-│── scripts/
-│   ├── extract_no_auth.py      # Fetch job vacancies without authentication
-│   ├── extract_auth.py         # Fetch job vacancies with authentication
-│── data/                       # Folder to store extracted CSV files
-│── .gitignore                   # Ignore cache, virtual env, and CSV files
-│── README.md                    # Project documentation
-
 ## 🛠️ Installation
 
 1. **Clone the repository**:
@@ -28,17 +19,18 @@ bumn_recruitment_2025/
    cd bumn_recruitment_2025
 
 2.	**Create a virtual environment (optional but recommended)**:
+```bash
 python3 -m venv venv
 source venv/bin/activate  # On macOS/Linux
 venv\Scripts\activate     # On Windows
-
-3.	**Install dependencies**:
+```
+4.	**Install dependencies**:
 pip install -r requirements.txt
 
 ## 🚀 Usage
 
 1️⃣ **Extract job vacancies without authentication**
-
+how 
 This script fetches job vacancies without requiring authentication.
 
 python scripts/extract_no_auth.py
