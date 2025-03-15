@@ -52,14 +52,14 @@ This script fetches job vacancies using a Bearer Token for authentication.
 - The total number of applicants for Page 1 is displayed.
 
 🔒 Security Considerations
-	•	Do not hardcode sensitive credentials in the scripts.
-	•	Store authentication tokens in a .env file or configuration file that is excluded via .gitignore.
-	•	Avoid making too many requests in a short period to prevent rate-limiting.
+- Do not hardcode sensitive credentials in the scripts.
+- Store authentication tokens in a .env file or configuration file that is excluded via .gitignore.
+- Avoid making too many requests in a short period to prevent rate-limiting.
 
 🏗️ Future Improvements
-	•	Implement multi-page fetching for authenticated requests.
-	•	Add error handling for API failures.
-	•	Store credentials securely using environment variables.
+- Implement multi-page fetching for authenticated requests.
+- Add error handling for API failures.
+- Store credentials securely using environment variables.
 
 📄 License
 
