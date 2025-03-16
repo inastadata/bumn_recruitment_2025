@@ -18,14 +18,18 @@ This project contains Python scripts to extract job vacancies from the **BUMN Re
 1. **Clone the repository**:
 
    ```
-   git clone https://github.com/inastadata/bumn_recruitment_2025.git
-   cd bumn_recruitment_2025
+git clone https://github.com/inastadata/bumn_recruitment_2025.git
+cd bumn_recruitment_2025
 	 ```
 
 2.	**Create a virtual environment (optional but recommended)**:
 ```
 python3 -m venv venv
+```
+```
 source venv/bin/activate  # On macOS/Linux
+```
+```
 venv\Scripts\activate     # On Windows
 ```
 3.	**Install dependencies**:
