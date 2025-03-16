@@ -1,6 +1,7 @@
 import requests
 import pandas as pd
 import time
+import os
 
 # API URL
 LIST_VACANCY_URL = "https://api-rbb.fhcibumn.id/general/career/list-vacancy"
@@ -25,6 +26,7 @@ HEADERS_NO_AUTH = {
 # Storage for all vacancies
 all_jobs = []
 total_applicants = 0
+total_page_applicants = 0
 page = 7  # Start from Page 7
 
 while True:
@@ -58,16 +60,27 @@ while True:
     # Collect vacancies and count applicants
     for job in job_list:
         job["total_applied"] = int(job.get("total_applied", 0))  # Extract number of applicants
+        total_page_applicants += job["total_applied"]
         total_applicants += job["total_applied"]  # Sum up applicants
         all_jobs.append(job)
 
+    print(f"Total applicants for page {page} = {total_page_applicants}")
+    total_page_applicants = 0
     page += 1
     time.sleep(1)  # Prevent rate-limiting
 
 # Convert to DataFrame
 df = pd.DataFrame(all_jobs)
 
+
+
 # Save to CSV
+df.to_csv("data/bumn_jobs_no_auth.csv", index=False)
+
+# Ensure the 'data' directory exists before saving
+os.makedirs("data", exist_ok=True)
+
+# Save the DataFrame to a CSV file
 df.to_csv("data/bumn_jobs_no_auth.csv", index=False)
 
 # Print Total Applicants
